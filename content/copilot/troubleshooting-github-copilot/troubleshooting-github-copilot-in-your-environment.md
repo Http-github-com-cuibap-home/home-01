@@ -3,10 +3,10 @@ title: Troubleshooting GitHub Copilot in your environment
 intro: 'Troubleshoot {% data variables.product.prodname_copilot %} related errors in your IDE.'
 product: '{% data reusables.gated-features.copilot %}'
 redirect_from:
-  - /copilot/troubleshooting-github-copilot-in-visual-studio
-  - /copilot/troubleshooting-github-copilot-in-visual-studio-code
-  - /copilot/troubleshooting-github-copilot-in-a-jetbrains-ide
-  - /copilot/troubleshooting-github-copilot-in-neovim
+  - /copilot/troubleshooting-github-copilot/troubleshooting-github-copilot-in-visual-studio
+  - /copilot/troubleshooting-github-copilot/troubleshooting-github-copilot-in-visual-studio-code
+  - /copilot/troubleshooting-github-copilot/troubleshooting-github-copilot-in-a-jetbrains-ide
+  - /copilot/troubleshooting-github-copilot/troubleshooting-github-copilot-in-neovim
 topics:
   - Copilot
   - Logging
@@ -119,13 +119,13 @@ In rare cases, errors might not be propagated to the corresponding error handler
 
 {% endvscode %}
 
-{% neovim %}
+{% vimneovim %}
 
 ## Checking if {% data variables.product.prodname_copilot%} is operational
 
-To check if GitHub Copilot is operational, run the following command in Neovim:
+To check if GitHub Copilot is operational, run the following command in Vim/Neovim:
 
 
     :Copilot status
 
-{% endneovim %}
+{% endvimneovim %}

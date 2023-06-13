@@ -42,6 +42,15 @@ You can enable {% data variables.secret-scanning.user_alerts %} for any {% ifver
 {% endnote %}
 {% endif %}
 
+{% ifversion code-security-multi-repo-enablement %}
+You can use security overview to find a set of repositories and enable or disable {% data variables.secret-scanning.user_alerts %} for them all at the same time. For more information, see "[AUTOTITLE](/code-security/security-overview/enabling-security-features-for-multiple-repositories)."
+
+You can also use the organization settings page for "Code security and analysis" to enable or disable {% data variables.secret-scanning.user_alerts %} for all public repositories in an organization:
+{% else %}
+You can use the organization settings page for "Code security and analysis" to enable {% data variables.product.prodname_code_scanning %} for all public repositories in an organization:
+{% endif %}
+
+
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.repositories.sidebar-settings %}
 {% data reusables.repositories.navigate-to-code-security-and-analysis %}{% ifversion ghec or ghes or ghae %}
@@ -56,15 +65,15 @@ You can enable {% data variables.secret-scanning.user_alerts %} for any {% ifver
 
 {% ifversion secret-scanning-push-protection %}
 1. Optionally, if you want to enable push protection, click **Enable** to the right of "Push protection." {% data reusables.secret-scanning.push-protection-overview %} For more information, see "[AUTOTITLE](/code-security/secret-scanning/protecting-pushes-with-secret-scanning)."
-   ![Enable push protection for your repository](/assets/images/help/repository/secret-scanning-enable-push-protection.png)
+   ![Enable push protection for your repository.](/assets/images/help/repository/secret-scanning-enable-push-protection.png)
 {% endif %}
 {% ifversion ghae %}
 1. Before you can enable {% data variables.product.prodname_secret_scanning %}, you need to enable {% data variables.product.prodname_GH_advanced_security %} first. To the right of "{% data variables.product.prodname_GH_advanced_security %}", click **Enable**.
-   ![Enable {% data variables.product.prodname_GH_advanced_security %} for your repository](/assets/images/enterprise/github-ae/repository/enable-ghas-ghae.png)
+   ![Enable {% data variables.product.prodname_GH_advanced_security %} for your repository.](/assets/images/enterprise/github-ae/repository/enable-ghas-ghae.png)
 2. Click **Enable {% data variables.product.prodname_GH_advanced_security %} for this repository** to confirm the action.
-   ![Confirm enabling {% data variables.product.prodname_GH_advanced_security %} for your repository](/assets/images/enterprise/github-ae/repository/enable-ghas-confirmation-ghae.png)
+   ![Confirm enabling {% data variables.product.prodname_GH_advanced_security %} for your repository.](/assets/images/enterprise/github-ae/repository/enable-ghas-confirmation-ghae.png)
 3. To the right of "{% data variables.product.prodname_secret_scanning_caps %}", click **Enable**.
-   ![Enable {% data variables.product.prodname_secret_scanning %} for your repository](/assets/images/enterprise/github-ae/repository/enable-secret-scanning-ghae.png)
+   ![Enable {% data variables.product.prodname_secret_scanning %} for your repository.](/assets/images/enterprise/github-ae/repository/enable-secret-scanning-ghae.png)
 {% endif %}
 
 {% ifversion fpt %}
@@ -76,10 +85,10 @@ You can enable {% data variables.secret-scanning.user_alerts %} for all of your 
 {% data reusables.user-settings.security-analysis %}
 1. Under "Code security and analysis", to the right of "{% data variables.product.prodname_secret_scanning_caps %}", click **Disable all** or **Enable all**.
 
-   ![Screenshot of the setting options for "{% data variables.product.prodname_secret_scanning_caps %}" on the personal account settings page. The options "Enable all" and "Disable all" are highlighted with an orange outline](/assets/images/help/repository/secret-scanning-personal-account-settings-enable-all.png)
+   ![Screenshot of the setting options for "{% data variables.product.prodname_secret_scanning_caps %}" on the personal account settings page. The options "Enable all" and "Disable all" are highlighted with an orange outline.](/assets/images/help/repository/secret-scanning-personal-account-settings-enable-all.png)
 1. Optionally, to automatically enable {% data variables.product.prodname_secret_scanning %} for any new public repositories that you create, below "{% data variables.product.prodname_secret_scanning_caps %}", select the checkbox for "Automatically enable for new public repositories."
 
-   ![Screenshot of the setting options for "{% data variables.product.prodname_secret_scanning_caps %}" on the personal account settings page. The option "Automatically enable for new public repositories" is highlighted with an orange outline](/assets/images/help/repository/secret-scanning-personal-account-settings-auto-enable.png)
+   ![Screenshot of the setting options for "{% data variables.product.prodname_secret_scanning_caps %}" on the personal account settings page. The option "Automatically enable for new public repositories" is highlighted with an orange outline.](/assets/images/help/repository/secret-scanning-personal-account-settings-auto-enable.png)
 
 {% endif %}
 

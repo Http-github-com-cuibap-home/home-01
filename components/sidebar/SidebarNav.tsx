@@ -1,10 +1,10 @@
 import cx from 'classnames'
 
 import { useMainContext } from 'components/context/MainContext'
-import { SidebarProduct } from './SidebarProduct'
-import { SidebarHomepage } from './SidebarHomepage'
+import { SidebarProduct } from 'src/landings/components/SidebarProduct'
+import { SidebarHomepage } from 'src/landings/components/SidebarHomepage'
 import { AllProductsLink } from './AllProductsLink'
-import { ApiVersionPicker } from './ApiVersionPicker'
+import { ApiVersionPicker } from 'src/rest/components/ApiVersionPicker'
 import { Link } from 'components/Link'
 
 type Props = {
@@ -52,11 +52,7 @@ export const SidebarNav = ({ variant = 'full' }: Props) => {
         style={{ width: 326, height: '100vh', paddingBottom: sidebarPaddingBottom }}
         role="banner"
       >
-        <nav
-          aria-labelledby={
-            !currentProduct || currentProduct.id === 'search' ? 'homepage' : currentProduct.name
-          }
-        >
+        <nav aria-labelledby="title-h1">
           {!currentProduct || currentProduct.id === 'search' ? (
             <SidebarHomepage />
           ) : (

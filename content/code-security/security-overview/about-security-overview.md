@@ -54,7 +54,7 @@ There are also dedicated views for each type of security alert that you can use 
 
 ## About security overview for organizations
 
-The application security team at your company can use the different views for both broad and specific analyses of your organization's security status. {% ifversion security-overview-org-risk-coverage %}For example, the team can use the "Security coverage" page to monitor the adoption of features across your organization or by a specific team as you roll out {% data variables.product.prodname_GH_advanced_security %}, or use the "Security risk" page to identify repositories with more than five open {% data variables.secret-scanning.alerts %}.{% else %}For example, they can use the overview page to monitor adoption of features by your organization or by a specific team as you roll out {% data variables.product.prodname_GH_advanced_security %} to your enterprise, or to review all alerts of a specific type and severity level across all repositories in your organization.{% endif %}
+The application security team at your company can use the different views for both broad and specific analyses of your organization's security status. {% ifversion security-overview-org-risk-coverage %} For example, the team can use the "Security coverage" view to monitor the adoption of features across your organization or by a specific team as you roll out {% data variables.product.prodname_GH_advanced_security %}, or use the "Security risk" view to identify repositories with more than five open {% data variables.secret-scanning.alerts %}. {% else %}For example, they can use the overview page to monitor adoption of features by your organization or by a specific team as you roll out {% data variables.product.prodname_GH_advanced_security %} to your enterprise, or to review all alerts of a specific type and severity level across all repositories in your organization.{% endif %} {% ifversion code-security-multi-repo-enablement %}You can also use security overview to find a set of repositories and enable or disable security features for them all at the same time. For more information, see "[AUTOTITLE](/code-security/security-overview/enabling-security-features-for-multiple-repositories)."{% endif %}
 
 You can find security overview on the **Security** tab for any organization that's owned by an enterprise. Each view shows a summary of the data that you have access to. As you add filters, all data and metrics across the view change to reflect the repositories or alerts that you've selected. For information about permissions, see "[Permission to view data in security overview](#permission-to-view-data-in-security-overview)."
 
@@ -72,7 +72,7 @@ For more information about these views, see "[AUTOTITLE](/code-security/security
 
 ### Understanding the main security overview
 
-![Screenshot of security overview for an organization](/assets/images/help/security-overview/security-overview-org-legacy.png)
+![Screenshot of security overview for an organization.](/assets/images/help/security-overview/security-overview-org-legacy.png)
 
 Each repository is shown in security overview with an indicator for each type of security feature and how many alerts there are of each type. If a security feature is not enabled for a repository, the indicator for that feature will be grayed out. In addition, a risk score is calculated for each repository based on its code scanning, Dependabot and secret scanning alerts. This score is in beta and should be used with caution. Its algorithm and approach is subject to change.
 
